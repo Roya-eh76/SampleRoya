@@ -5,11 +5,11 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class APIClient {
+public class ApiClient {
 
     private static Retrofit retrofit = null;
 
-    static Retrofit getClient() {
+     public Retrofit getRetrofit() {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -19,6 +19,7 @@ public class APIClient {
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://restcountries.eu/rest/v2")
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(client)
                 .build();
 
