@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 public class CountryModel {
 
 	@SerializedName("area")
-	private int area;
+	private Double area;
 
 	@SerializedName("nativeName")
 	private String nativeName;
@@ -72,12 +72,12 @@ public class CountryModel {
 	private String region;
 
 	@SerializedName("latlng")
-	private List<Integer> latlng;
+	private List<Double> latlng;
 
 	@SerializedName("currencies")
 	private List<CurrenciesItem> currencies;
 
-	public int getArea(){
+	public Double getArea(){
 		return area;
 	}
 
@@ -165,7 +165,7 @@ public class CountryModel {
 		return region;
 	}
 
-	public List<Integer> getLatlng(){
+	public List<Double> getLatlng(){
 		return latlng;
 	}
 

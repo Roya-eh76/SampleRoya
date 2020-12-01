@@ -1,6 +1,7 @@
 package com.example.sampleroyaandroid.repository;
 
 import android.content.Context;
+import android.util.Log;
 
 
 import androidx.lifecycle.LiveData;
@@ -87,12 +88,14 @@ public class CountriesRepository  {
             @Override
             public void onResponse(Call<List<CountryModel>> call, Response<List<CountryModel>> response) {
                 List<CountryModel> countriesItems =response.body();
-                list.postValue(countriesItems);
+                list.setValue(countriesItems);
+                Log.d("dsfdf","pass");
+
             }
 
             @Override
             public void onFailure(Call<List<CountryModel>> call, Throwable t) {
-
+                Log.d("dsfdf","failed");
             }
 
         };

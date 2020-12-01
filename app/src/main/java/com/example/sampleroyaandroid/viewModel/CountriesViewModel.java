@@ -22,6 +22,7 @@ public class CountriesViewModel extends ViewModel {
 
     public MutableLiveData<List<CountryModel>> getList(Context context) {
         countriesRepository = CountriesRepository.getInstance(context);
+        countriesRepository.getAllCountry();
         return countriesRepository.getList();
     }
 }

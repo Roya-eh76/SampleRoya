@@ -72,7 +72,7 @@ public class MainFragment extends Fragment {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false));
 
 
-//        getAllCountry();
+       getAllCountry();
 
         return binding.getRoot();
     }

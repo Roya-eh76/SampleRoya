@@ -37,9 +37,7 @@ public class ApiClient {
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://restcountries.eu/rest/v2/")
                 .addConverterFactory(GsonConverterFactory.create())
-/*
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-*/
                 .client(client)
                 .build();
 

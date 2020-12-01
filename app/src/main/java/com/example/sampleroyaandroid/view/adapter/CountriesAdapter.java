@@ -38,7 +38,7 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
       holder.binding.nameTextView.setText(listCountries.get(position).getName());
       holder.binding.capitalTextView.setText(listCountries.get(position).getCapital());
-      holder.binding.languageTextView.setText((CharSequence) listCountries.get(position).getLanguages().get(position));
+//      holder.binding.languageTextView.setText((CharSequence) listCountries.get(position).getLanguages().get(position));
 
    /*     Picasso.get()
                 .load(listCountries.get(position).get)
